@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		854769A7AF5A92D73CD8D80B /* Pods_TestWorkWeather_TestWorkWeatherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9225F8FDAEA7215BEEC19B9F /* Pods_TestWorkWeather_TestWorkWeatherUITests.framework */; };
 		8A2E0D31256835DC001F28CD /* AutoCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0D30256835DC001F28CD /* AutoCompleteViewController.swift */; };
-		8A32EC38256B14130002D639 /* CellWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A32EC37256B14130002D639 /* CellWeather.swift */; };
 		8A633F02256823B000B9067E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A633F01256823B000B9067E /* AppDelegate.swift */; };
 		8A633F04256823B000B9067E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A633F03256823B000B9067E /* SceneDelegate.swift */; };
 		8A633F06256823B000B9067E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A633F05256823B000B9067E /* ViewController.swift */; };
@@ -19,6 +18,7 @@
 		8A633F19256823B300B9067E /* TestWorkWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A633F18256823B300B9067E /* TestWorkWeatherTests.swift */; };
 		8A633F24256823B300B9067E /* TestWorkWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A633F23256823B300B9067E /* TestWorkWeatherUITests.swift */; };
 		8A633F452568259900B9067E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A633F442568259900B9067E /* WeatherViewController.swift */; };
+		8AA032EB256C5AC5008550E8 /* CellWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA032EA256C5AC5008550E8 /* CellWeather.swift */; };
 		D174038A37B8C15218613121 /* Pods_TestWorkWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4B3913F19C7A0EB6F91D49 /* Pods_TestWorkWeather.framework */; };
 		DE3D66015960C780AE26C7E6 /* Pods_TestWorkWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44270F77D51CE1B89CEFBF4 /* Pods_TestWorkWeatherTests.framework */; };
 /* End PBXBuildFile section */
@@ -46,7 +46,6 @@
 		4955C4846BF51B165503BD66 /* Pods-TestWorkWeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWorkWeatherTests.release.xcconfig"; path = "Target Support Files/Pods-TestWorkWeatherTests/Pods-TestWorkWeatherTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C4B3913F19C7A0EB6F91D49 /* Pods_TestWorkWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestWorkWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A2E0D30256835DC001F28CD /* AutoCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteViewController.swift; sourceTree = "<group>"; };
-		8A32EC37256B14130002D639 /* CellWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellWeather.swift; path = "../../TestWorkWeather-main/WeatherTestWork/CellWeather.swift"; sourceTree = "<group>"; };
 		8A633EFE256823B000B9067E /* TestWorkWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestWorkWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A633F01256823B000B9067E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A633F03256823B000B9067E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		8A633F23256823B300B9067E /* TestWorkWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWorkWeatherUITests.swift; sourceTree = "<group>"; };
 		8A633F25256823B300B9067E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A633F442568259900B9067E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		8AA032EA256C5AC5008550E8 /* CellWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWeather.swift; sourceTree = "<group>"; };
 		9225F8FDAEA7215BEEC19B9F /* Pods_TestWorkWeather_TestWorkWeatherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestWorkWeather_TestWorkWeatherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B52BFF54048754702D7C2F /* Pods-TestWorkWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWorkWeather.release.xcconfig"; path = "Target Support Files/Pods-TestWorkWeather/Pods-TestWorkWeather.release.xcconfig"; sourceTree = "<group>"; };
 		D1527E93F7D3F4A1E73396B6 /* Pods-TestWorkWeatherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWorkWeatherTests.debug.xcconfig"; path = "Target Support Files/Pods-TestWorkWeatherTests/Pods-TestWorkWeatherTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 				8A633F03256823B000B9067E /* SceneDelegate.swift */,
 				8A633F05256823B000B9067E /* ViewController.swift */,
 				8A633F442568259900B9067E /* WeatherViewController.swift */,
-				8A32EC37256B14130002D639 /* CellWeather.swift */,
+				8AA032EA256C5AC5008550E8 /* CellWeather.swift */,
 				8A633F07256823B000B9067E /* Main.storyboard */,
 				8A2E0D30256835DC001F28CD /* AutoCompleteViewController.swift */,
 				8A633F0A256823B300B9067E /* Assets.xcassets */,
@@ -417,10 +417,10 @@
 			files = (
 				8A633F06256823B000B9067E /* ViewController.swift in Sources */,
 				8A633F452568259900B9067E /* WeatherViewController.swift in Sources */,
-				8A32EC38256B14130002D639 /* CellWeather.swift in Sources */,
 				8A633F02256823B000B9067E /* AppDelegate.swift in Sources */,
 				8A633F04256823B000B9067E /* SceneDelegate.swift in Sources */,
 				8A2E0D31256835DC001F28CD /* AutoCompleteViewController.swift in Sources */,
+				8AA032EB256C5AC5008550E8 /* CellWeather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
