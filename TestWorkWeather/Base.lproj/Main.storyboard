@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zfO-VH-1is">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Выбор города-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="select" id="BYZ-38-t0r" customClass="ViewController" customModule="TestWorkWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H8k-sx-Fas">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H8k-sx-Fas" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A9w-K0-kP7"/>
+                            <constraint firstItem="H8k-sx-Fas" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eYe-CX-rI1"/>
+                            <constraint firstItem="H8k-sx-Fas" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gDb-dI-ytg"/>
+                            <constraint firstItem="H8k-sx-Fas" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tci-MK-QpT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Выбор города" id="WHA-rn-2Zj">
+                        <barButtonItem key="rightBarButtonItem" title="+" largeContentSizeImage="plus" catalog="system" id="SH2-g9-1jX">
+                            <connections>
+                                <action selector="AutoComplete:" destination="BYZ-38-t0r" id="79P-Or-afh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityList" destination="H8k-sx-Fas" id="qke-4J-mcW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962.39999999999998" y="77.58620689655173"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GPV-2c-ej9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zfO-VH-1is" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qnb-3s-q5m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="E8j-X2-T1g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KqW-EC-oNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="77.58620689655173"/>
+        </scene>
+        <!--Погода-->
+        <scene sceneID="TgC-MG-gqU">
+            <objects>
+                <viewController storyboardIdentifier="Weather" id="CTQ-6c-h1F" customClass="WeatherViewController" customModule="TestWorkWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="azK-AU-Ri5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Погода на сегодня" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlr-S1-QE9">
+                                <rect key="frame" x="16" y="55" width="343" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="0T0-kZ-t8c"/>
+                                    <constraint firstAttribute="height" constant="20" id="uOx-Sx-0Dh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sfv-E4-KQZ">
+                                <rect key="frame" x="0.0" y="83" width="375" height="87"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="ute-dk-Jfg"/>
+                                    <constraint firstAttribute="height" constant="87" id="yHV-go-K2h"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Or-3v-Ntk">
+                                    <size key="itemSize" width="109" height="75"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="WeatherCollectionViewCell" reuseIdentifier="WeatherCollectionViewCell" id="SRL-4R-25u" customClass="WeatherCollectionViewCell" customModule="TestWorkWeather">
+                                        <rect key="frame" x="0.0" y="6" width="109" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hiN-T6-bnz">
+                                            <rect key="frame" x="0.0" y="0.0" width="109" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="109" height="75"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Погода на завтра" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAQ-k9-psu">
+                                <rect key="frame" x="16" y="189" width="343" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="6K5-HU-me2"/>
+                                    <constraint firstAttribute="height" constant="20.329999999999998" id="whg-Jb-up9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tbZ-yY-e0P">
+                                <rect key="frame" x="0.0" y="234" width="375" height="87"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="BX0-co-mit"/>
+                                    <constraint firstAttribute="height" constant="87" id="TJs-K3-WE1"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7ah-xo-CqN">
+                                    <size key="itemSize" width="125" height="81"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="WeatherCollectionViewCellTomor" reuseIdentifier="WeatherCollectionViewCellTomor" id="cdE-dK-Nei" customClass="WeatherCollectionViewCellTomor" customModule="TestWorkWeather">
+                                        <rect key="frame" x="0.0" y="3" width="125" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HUq-Li-Ssh">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="81"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="125" height="81"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjE-re-C6k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="AlX-Cs-0xQ"/>
+                                    <constraint firstAttribute="width" constant="375" id="Rl6-3J-BsF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="labelColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8aB-Gd-Mh0">
+                                <rect key="frame" x="0.0" y="329" width="375" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="FJo-Se-fgu"/>
+                                    <constraint firstAttribute="width" constant="375" id="O1d-bm-ra4"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qmC-ag-eel">
+                                    <size key="itemSize" width="195" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="WeatherCollectionViewCellDaily" reuseIdentifier="WeatherCollectionViewCellDaily" id="2JV-48-6nY" customClass="DailyWeatherCell" customModule="TestWorkWeather">
+                                        <rect key="frame" x="0.0" y="24" width="195" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MyL-p8-sUm">
+                                            <rect key="frame" x="0.0" y="0.0" width="195" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="195" height="80"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bQ9-Aq-axn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DAQ-k9-psu" firstAttribute="leading" secondItem="bQ9-Aq-axn" secondAttribute="leading" constant="16" id="40m-Qn-gur"/>
+                            <constraint firstItem="8aB-Gd-Mh0" firstAttribute="leading" secondItem="bQ9-Aq-axn" secondAttribute="leading" id="8bh-fR-Ig1"/>
+                            <constraint firstItem="tbZ-yY-e0P" firstAttribute="trailing" secondItem="bQ9-Aq-axn" secondAttribute="trailing" id="Cub-YJ-tzs"/>
+                            <constraint firstItem="sfv-E4-KQZ" firstAttribute="trailing" secondItem="bQ9-Aq-axn" secondAttribute="trailing" id="IVr-Ea-y90"/>
+                            <constraint firstItem="ZjE-re-C6k" firstAttribute="trailing" secondItem="bQ9-Aq-axn" secondAttribute="trailing" id="ImK-RM-NgU"/>
+                            <constraint firstItem="bQ9-Aq-axn" firstAttribute="trailing" secondItem="Rlr-S1-QE9" secondAttribute="trailing" constant="16" id="JIW-fz-2KN"/>
+                            <constraint firstAttribute="trailing" secondItem="8aB-Gd-Mh0" secondAttribute="trailing" id="Jhc-F5-lhu"/>
+                            <constraint firstItem="8aB-Gd-Mh0" firstAttribute="top" secondItem="tbZ-yY-e0P" secondAttribute="bottom" constant="8" id="LuN-Ke-G70"/>
+                            <constraint firstItem="bQ9-Aq-axn" firstAttribute="trailing" secondItem="DAQ-k9-psu" secondAttribute="trailing" constant="16" id="N7p-eh-YT7"/>
+                            <constraint firstItem="sfv-E4-KQZ" firstAttribute="top" secondItem="Rlr-S1-QE9" secondAttribute="bottom" constant="8" id="RLF-Ao-Epw"/>
+                            <constraint firstItem="ZjE-re-C6k" firstAttribute="top" secondItem="bQ9-Aq-axn" secondAttribute="top" id="Vit-Xc-gxU"/>
+                            <constraint firstItem="tbZ-yY-e0P" firstAttribute="leading" secondItem="bQ9-Aq-axn" secondAttribute="leading" id="ZFf-ss-bMm"/>
+                            <constraint firstItem="bQ9-Aq-axn" firstAttribute="bottom" secondItem="8aB-Gd-Mh0" secondAttribute="bottom" constant="210" id="cmt-jj-XFN"/>
+                            <constraint firstItem="Rlr-S1-QE9" firstAttribute="top" secondItem="ZjE-re-C6k" secondAttribute="bottom" constant="18" id="dyK-Eg-rJS"/>
+                            <constraint firstItem="sfv-E4-KQZ" firstAttribute="leading" secondItem="bQ9-Aq-axn" secondAttribute="leading" id="owr-jO-JAT"/>
+                            <constraint firstItem="Rlr-S1-QE9" firstAttribute="leading" secondItem="bQ9-Aq-axn" secondAttribute="leading" constant="16" id="u4e-WA-uEw"/>
+                            <constraint firstItem="tbZ-yY-e0P" firstAttribute="top" secondItem="DAQ-k9-psu" secondAttribute="bottom" constant="24.670000000000002" id="vRc-eI-xnV"/>
+                            <constraint firstItem="DAQ-k9-psu" firstAttribute="top" secondItem="sfv-E4-KQZ" secondAttribute="bottom" constant="19" id="zCd-yX-9Ga"/>
+                            <constraint firstItem="ZjE-re-C6k" firstAttribute="leading" secondItem="bQ9-Aq-axn" secondAttribute="leading" id="zgk-YJ-fqS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Погода" id="bv8-Iw-Sh0"/>
+                    <connections>
+                        <outlet property="DateLabel" destination="Rlr-S1-QE9" id="cin-eH-9xA"/>
+                        <outlet property="DateTomorLabel" destination="DAQ-k9-psu" id="CEw-CV-9Wf"/>
+                        <outlet property="WeatherDaily" destination="8aB-Gd-Mh0" id="9Ou-Xv-3oG"/>
+                        <outlet property="WeatherTod" destination="sfv-E4-KQZ" id="T3G-4d-I9O"/>
+                        <outlet property="WeatherTomor" destination="tbZ-yY-e0P" id="j8m-Xn-cn2"/>
+                        <outlet property="cityLabel" destination="ZjE-re-C6k" id="VXB-2b-KVr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89t-7l-nd6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2818.4000000000001" y="74.212893553223395"/>
+        </scene>
+        <!--Поиск города-->
+        <scene sceneID="FAa-ds-khX">
+            <objects>
+                <viewController storyboardIdentifier="Complete" id="9fd-O8-GUP" customClass="AutoCompleteViewController" customModule="TestWorkWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AOs-do-DC5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PkV-30-W4D">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Введите название города..." translatesAutoresizingMaskIntoConstraints="NO" id="V0m-7V-zDa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i7i-dZ-hlc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PkV-30-W4D" firstAttribute="trailing" secondItem="i7i-dZ-hlc" secondAttribute="trailing" id="44n-EH-CNA"/>
+                            <constraint firstItem="PkV-30-W4D" firstAttribute="top" secondItem="V0m-7V-zDa" secondAttribute="bottom" id="EZZ-bL-wPu"/>
+                            <constraint firstItem="V0m-7V-zDa" firstAttribute="top" secondItem="AOs-do-DC5" secondAttribute="top" id="Wli-zs-L4j"/>
+                            <constraint firstAttribute="trailing" secondItem="V0m-7V-zDa" secondAttribute="trailing" id="Xc9-RT-RsG"/>
+                            <constraint firstItem="PkV-30-W4D" firstAttribute="top" secondItem="V0m-7V-zDa" secondAttribute="bottom" id="XuF-aQ-nCS"/>
+                            <constraint firstItem="V0m-7V-zDa" firstAttribute="leading" secondItem="AOs-do-DC5" secondAttribute="leading" id="oLt-Qh-hi4"/>
+                            <constraint firstItem="PkV-30-W4D" firstAttribute="leading" secondItem="i7i-dZ-hlc" secondAttribute="leading" id="ppE-J8-kae"/>
+                            <constraint firstItem="PkV-30-W4D" firstAttribute="bottom" secondItem="i7i-dZ-hlc" secondAttribute="bottom" id="vAz-R4-n8x"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Поиск города" id="lMQ-Xa-con"/>
+                    <connections>
+                        <outlet property="cityAutoComplete" destination="V0m-7V-zDa" id="S1C-o2-KWs"/>
+                        <outlet property="notesTableView" destination="PkV-30-W4D" id="Va4-Rv-PLN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mo3-84-1rB" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1907.9439252336447" y="77.105831533477328"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
